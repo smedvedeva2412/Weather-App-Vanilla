@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Vanilla</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <header>
+            <div class="row">
+              <div class="col-4 date-time">
+                <div id="currentlyDate">
+                  Thursday, 26 January <br />
+                  18:00
+                </div>
+              </div>
+              <div class="col-8 search-city">
+                <form id="search-form">
+                  <input
+                    type="text"
+                    placeholder=" 🎾 Enter a city"
+                    class="search"
+                    id="seach-text-input"
+                  />
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-outline-primary search-buttom"
+                  />
+                </form>
+              </div>
+            </div>
+          </header>
+
+          <div class="row weather-today">
+            <h1></h1>
+
+            <div class="col-2 make-middle">
+              <img src="#" alt="" id="temperature-today-icon" />
+            </div>
+            <div class="col-5 temperature-today make-middle">
+              <span id="temperatureToday"></span>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+            <div class="col-5 indicators make-middle">
+              <div class="humidity">Humidity: <span id="humidity"></span>%</div>
+              <div class="wind">Wind: <span id="wind"></span> km/h</div>
+              <div class="description" id="description"></div>
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+        <small>
+          <a
+            class="link-code"
+            target="_blank"
+            href="https://github.com/YuliiaYB/vanilla-weather-app"
+            >Open-source code
+          </a>
+          by Svitlana Medvedieva
+        </small>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
